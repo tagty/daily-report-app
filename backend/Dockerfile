@@ -1,10 +1,10 @@
 FROM ruby:4.0.2
 
-WORKDIR /app
+WORKDIR /rails
 
-RUN apt-get update -qq && apt-get install -y libpq-dev
+RUN apt-get update -qq && apt-get install -y libpq-dev build-essential
 
-COPY Gemfile* ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY . .

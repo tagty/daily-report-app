@@ -5,7 +5,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
     ports:
       - "5432:5432"
 
@@ -13,11 +13,12 @@ services:
     build: ./backend
     command: bash -c "bundle exec rails db:prepare && bundle exec rails s -b 0.0.0.0"
     volumes:
-      - ./backend:/app
+      - ./backend:/rails
     ports:
       - "3000:3000"
     environment:
       DATABASE_URL: postgres://postgres:password@db:5432/daily_report_development
+      RAILS_ENV: development
     depends_on:
       - db
 

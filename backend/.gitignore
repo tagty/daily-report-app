@@ -1,0 +1,37 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore storage (uploaded files in development and any temp files in production).
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore node_modules
+/node_modules
+
+# Ignore bytecompiled Ruby files
+*.rbc
+capybara-*.html
+
+# Ignore CI report generation
+/coverage/
+
+# Ignore environment files
+.env
+.env.*
