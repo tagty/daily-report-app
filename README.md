@@ -5,7 +5,7 @@
 ## 技術スタック
 
 - **backend**: Ruby on Rails (API mode) / Ruby 4.0.2
-- **frontend**: Next.js (App Router) / Node 24
+- **frontend**: Next.js 16 (App Router) + TypeScript + Tailwind CSS / Node 24
 - **DB**: PostgreSQL 18
 - **インフラ**: Docker Compose
 

@@ -11,7 +11,7 @@ Report を管理する小さな Web アプリ。backend（Rails API）と fronte
 | 役割 | 技術 | バージョン |
 |------|------|-----------|
 | backend | Ruby on Rails (API mode) | Ruby 4.0.2 |
-| frontend | Next.js (App Router) | Node 24 |
+| frontend | Next.js (App Router) + TypeScript + Tailwind CSS | Node 24 / Next.js 16 |
 | DB | PostgreSQL | 18 |
 
 ## 起動・操作コマンド
