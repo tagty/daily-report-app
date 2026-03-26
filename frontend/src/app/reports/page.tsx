@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Report = {
   id: number;
   date: string;
@@ -13,7 +15,15 @@ const mockReports: Report[] = [
 export default function ReportsPage() {
   return (
     <main className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6">日報一覧</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-bold">日報一覧</h1>
+        <Link
+          href="/reports/new"
+          className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 text-sm"
+        >
+          作成
+        </Link>
+      </div>
       <ul className="space-y-4">
         {mockReports.map((report) => (
           <li key={report.id} className="border rounded-lg p-4">
