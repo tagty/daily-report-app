@@ -5,12 +5,21 @@ import { useRouter } from "next/navigation";
 export default function NewReportPage() {
   const router = useRouter();
 
-  function handleSubmit(formData: FormData) {
-    const date = formData.get("date");
-    const body = formData.get("body");
-    // TODO: API に POST する
-    console.log({ date, body });
-    router.push("/reports");
+  async function handleSubmit(formData: FormData) {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/reports`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        report: {
+          date: formData.get("date"),
+          body: formData.get("body"),
+        },
+      }),
+    });
+
+    if (res.ok) {
+      router.push("/reports");
+    }
   }
 
   return (
