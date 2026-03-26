@@ -16,6 +16,6 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.expect(report: [:date, :body])
+    params.expect(report: [ :date, :body ])
   end
 end
